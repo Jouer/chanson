@@ -1,0 +1,54 @@
+<% provide(:title, 'cafe') %>
+
+<div class="container clear">
+<div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm">
+    
+<p> ghgygyguyyyyyuuuuuuuuuu uuuuuuuuuu uuuuuuuuuuuuuuuuuuuuuuuuuuu uuuuuuu</p>
+    </div> <!--  col-md-3 -->
+ 
+ 
+<div class="col-xs-12 col-sm-12 col-md-9">
+  <div class='sheet' >
+  <div class='view' >
+  <div class='container' >
+   <div class="row">
+      <div class="col-md-7 col1">
+     <div> <%= image_tag('hall/sal1.png', width: '200', class: "")%>
+ <%= image_tag('hall/sal4.png', width: '100', class: "")%></div>
+ 
+ <div> <%= image_tag('hall/sal5.png', width: '150', class: "")%>
+ <%= image_tag('hall/sal6.png', width: '150', class: "")%></div>
+ 
+ <div> <%= image_tag('hall/sal7.png', width: '150', class: "")%>
+ <%= image_tag('hall/sal8.png', width: '150', class: "")%></div>
+      </div><!--  .col-xs-1 .col-md-7 -->
+      
+      <div class="col-md-5 col2">
+ 
+       <% if @page %>
+<% @page.sections.each do |section| %>
+<% case section.content_type
+       when 'HTML' %>
+       <div class="description">
+          <%= simple_format(section.content) %>
+         </div>
+    <% when 'text' %>
+ <%= section.content %>
+  <% end %>
+ <% end %>
+ <% end %>
+ 
+    
+      </div><!--  .col-xs-1 .col-md-5 -->
+      
+    </div> 
+    </div> 
+    </div>
+    <div class="line clear"><%= image_tag("tel.png", alt: "Imaginasion") %><p>570-48-98</p></div> 
+    </div> 
+     
+     </div><!--  .col-xs-1 .col-md-9 -->
+
+     </div> <!-- row -->  
+</div><!-- content -->

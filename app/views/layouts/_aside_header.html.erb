@@ -10,7 +10,7 @@
       <span class="icon-bar"></span>
     </button>
    
-    <%= link_to "Galina Ridna", root_path, id: "name", :class => "navbar-brand" %>
+    <%= link_to "Кафе Маяк", root_path, id: "name", :class => "navbar-brand" %>
     
      
   </div>
@@ -36,7 +36,9 @@
     
     <ul class="nav navbar-nav navbar-right">
      <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "About project", home_path %></li>
+            <li><%= link_to "Afisha", info_path %></li>
+            <li><%= link_to "View", view_path %></li>
+            <li><%= link_to "About cafe", home_path %></li>
            <% if signed_in? %>
             <li><%= link_to "Users", users_path %></li>
       <li class="dropdown">

@@ -30,11 +30,12 @@ h4{color: $gr;}
 .shadow{
 -moz-box-shadow: 5px 5px 5px -3px #333;
    -webkit-box-shadow: 5px 5px 5px -3px #333;
-   box-shadow: 3px 3px 3px -2px #333;}
+   box-shadow: 3px 3px 3px -2px #333;
+   }
          
 body {
   padding-top: 70px;
- background: asset-url('gr.png') 0px 30px;
+ background: asset-url('wall.png') 0px 30px;
   height: 100%; margin: 0 auto 0; 
   color: $marine;
 }
@@ -50,7 +51,7 @@ left: 215px;
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: $brightblue;
+  color: $lightrose;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -63,15 +64,96 @@ left: 215px;
     background: none;
   }
 }
+.sheet  {
+	margin: 10px auto 10px;
+    text-decoration: none;
+    font-family:"lucida grande", tahoma, verdana, arial, sans-serif;
+    font-size:1em;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    letter-spacing:normal;
+    line-height:1;
+	height: 100%;
+    position: relative;
+    z-index: 10;
+    border-radius: 10px 120px / 120px 10px ;
+   -moz-box-shadow: 5px 5px 15px -3px #333;
+   -webkit-box-shadow: 5px 5px 15px -3px #333;
+    box-shadow: 5px 5px 15px -3px #333;
+
+    background-color: white;
+.afisha{  background: asset-url('disk.png')no-repeat bottom right;
+min-height: 800px;}    
+.view{  background: asset-url('chayka.png')no-repeat bottom;
+min-height: 800px;}    
+&:after {
+	content:"";
+	position: absolute;
+	z-index:-1;
+    left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+    border-radius: 10px 120px / 120px 10px ;
+    -moz-box-shadow: 5px 5px 15px -3px #333;
+    -webkit-box-shadow: 5px 5px 15px -3px #333;
+    background: -moz-linear-gradient(left, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 11%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.65)), color-stop(11%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 11%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 11%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 11%,rgba(0,0,0,0) 100%); /* IE10+ */
+    background: linear-gradient(to right, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 11%,rgba(0,0,0,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+  }
+ } 
+.logo{
+ display: block;
+ margin: 10px;
+ float: left;
+ width: 350px;
+ height:329px;
+ background: asset-url('lg.png') no-repeat;
+}
+
+.col1{padding:30px;       }
+.col2{border-left: 1px solid #ccc; margin-top: 50px;      }
 .mode{
-
-
 img {
 float: left;
 height: 200px;
 padding: 20px;
 border: 1px solid $marine;
 	}
+}
+ .view img{
+    margin: 30px;
+    border-radius: 120px 10px / 20px 130px ;
+    -moz-box-shadow: 5px 5px 5px -3px #333;
+   -webkit-box-shadow: 5px 5px 5px -3px #333;
+   box-shadow: 3px 3px 3px -2px #333;
+   	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+    -webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+	
+&:hover {
+   border-radius: 10px 120px / 130px 10px ;
+	-webkit-transform: scale(1.7);
+	-moz-transform: scale(1.7);
+	-ms-transform: scale(1.7);
+	-o-transform: scale(1.7);
+	transform: scale(1.7);
+	-moz-box-shadow: 3px 3px 5px #000;
+	-webkit-box-shadow: 3px 3px 5px #000;
+	box-shadow: 3px 3px 5px #000;
+	-webkit-backface-visibility: hidden;
+}
 }
 #introduction{padding-top: 100px;
 padding-left: 10px;

@@ -22,7 +22,8 @@ end
   match '/content', to: 'static_pages#show', via: 'get'
   match '/home',  to: 'static_pages#home', via: 'get'
  match '/show',  to: 'static_pages#picture', via: 'get'
- 
+ match '/info',  to: 'static_pages#info', via: 'get'
+ match '/view',  to: 'static_pages#view', via: 'get'
   
  match '/admin', to: 'sessions#menu',        via: 'get'
 

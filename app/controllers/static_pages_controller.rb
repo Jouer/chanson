@@ -3,7 +3,7 @@ class StaticPagesController < ApplicationController
 	before_action :setup_navigation
 	
   def index
-  @image = 'portrait.png'
+  @image = 'lg.png'
   @page = Page.where(:permalink => 'home').first
   end
    
@@ -11,6 +11,16 @@ class StaticPagesController < ApplicationController
   @image = 'four.png'
   @page = Page.where(:permalink => 'about').first
   end
+
+	def info
+	@image = 'hall1.jpg'
+    @page = Page.where(:permalink => 'afisha').first
+	end
+
+  def view
+	@image = 'cafe.png'
+    @page = Page.where(:permalink => 'view').first
+	end
 
   def show
   	@page = Page.where(:permalink => params[:id], :visible => true).first

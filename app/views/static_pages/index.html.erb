@@ -1,19 +1,12 @@
 <% provide(:title, 'Home') %>
-<div class="mode clear">
- 
- 
-<%= image_tag(@image, :alt => "", class: "shadow ")%>
-<div id="introduction"><p>Марина Цветаева - </br></p><p>...Чтобы в мире было двое:</br>Я и мир!</br></p></div>
-<div id='head'><h1>Galina Ridna</h1>
- <p class="small">electronic collection of paintings</p>
-</div>
 
-
-</div><!--mode-->
-		
 <div id="content_page">
-<div class="container clear">
-<% if @page %>
+<div class="container clearfix">
+<div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm">
+
+  <%= image_tag(@image,width:'200', :alt => "", class: "")%>
+   <div><% if @page %>
 <% @page.sections.each do |section| %>
 <% case section.content_type
        when 'HTML' %>
@@ -21,20 +14,27 @@
           <%= simple_format(section.content) %>
          </div>
     <% when 'text' %>
+   
  <%= section.content %>
   <% end %>
  <% end %>
  <% end %>
-<div class="line"><%= image_tag("pict1.png", alt: "Imaginasion") %></div>
-<ul>
+     
+     </div> 
+     </div><!--  col-md-3 -->
+ 
+ 
+<div class="col-xs-12 col-sm-12 col-md-9">
+    
+    <embed src="<%= asset_path('cafe.swf') %>", quality="high"  wmode=transparent  width="800" height="462" name="images/cafe" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
 
-<li></li>
-<li></li>
-<li></li>
-</ul>
+         <div class="line clear"><%= image_tag("tel.png", alt: "Imaginasion") %><p>570-48-98</p></div> 
+     </div><!--  .col-xs-1 .col-md-9 -->
 
-</div>
+     </div> <!-- row -->  
 
+
+</div><!-- container -->
 
 </div><!-- content -->
 

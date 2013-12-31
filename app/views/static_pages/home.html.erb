@@ -1,13 +1,15 @@
 <% provide(:title, 'About Project') %>
-<div class="mode">
-<%= image_tag(@image, :alt => "", class: "shadow")%>
-<div id="introduction"><p>Марина Цветаева - </br></p><p>...Чтобы в мире было двое:</br>Я и мир!</br></p></div>
-<div id='head'><h1>Galina Ridna</h1>
-<p class="small">electronic collection of paintings</p></div>
-
-</div>
 <div class="container clear">
-<div id="content_page">
+
+
+<div align="center" class="book center" >
+
+
+	
+	<embed src="<%= asset_path('ex.swf') %>", quality="high"  wmode=transparent  width="1024" height="768" align="middle"  allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+	
+	
+
  <% if @page %>
 <% @page.sections.each do |section| %>
 <% case section.content_type
@@ -20,10 +22,8 @@
   <% end %>
  <% end %>
  <% end %>
-<div class="line"><%= image_tag("pict1.png", alt: "Imaginasion") %></div>
+<div class="line clear"><%= image_tag("tel.png", alt: "Imaginasion") %><p>570-48-98</p></div> 
 </div>
-<script src="static_pages.js">
-</script>
-</div><!-- content -->
+</div><!-- container -->
 
 

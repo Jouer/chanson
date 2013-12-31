@@ -1,9 +1,60 @@
-<h1>StaticPages#info</h1>
-<p>J'ai un peu trop navigué</br>
-Et je me sens fatigué.</br>
-Fais-moi un bon café,</br>
-J'ai une histoire à te raconter.</br>
-Il était une fois quelqu'un,</br>
-Quelqu'un que tu connais bien,</br>
-Il est parti très loin,</br>
-Il s'est perdu, il est revenu.</p>
+<% provide(:title, 'Afisha') %>
+<div id="content_page">
+<div class="container clearfix">
+<div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm">
+ <p>Среди миров
+Среди миров, в мерцании светил
+Одной Звезды я повторяю имя...
+Не потому, чтоб я Ее любил,
+А потому, что я томлюсь с другими.
+
+И если мне сомненье тяжело,
+Я у Нее одной ищу ответа,
+Не потому, что от Нее светло,
+А потому, что с Ней не надо света</p>
+     </div><!--  col-md-3 -->
+ 
+ 
+<div class="col-xs-12 col-sm-12 col-md-9">
+  <div class='sheet' >
+  <div class='afisha' >
+  <div class='container' >
+   <div class="row">
+      <div class="col-md-7 col1">
+      
+        <% if @page %>
+<% @page.sections.each do |section| %>
+<% case section.content_type
+       when 'HTML' %>
+       <div class="description">
+          <%= simple_format(section.content) %>
+         </div>
+    <% when 'text' %>
+ <%= section.content %>
+  <% end %>
+ <% end %>
+ <% end %>
+ 
+      </div><!--  .col-xs-1 .col-md-7 -->
+      
+      <div class="col-md-5 col2">
+ 
+       <%= image_tag(@image, :alt => "", class: "shadow pull-right")%>
+    
+      </div><!--  .col-xs-1 .col-md-5 -->
+      
+    </div> 
+    </div> 
+    </div>
+    <div class="line clear"><%= image_tag("tel.png", alt: "Imaginasion") %><p>570-48-98</p></div> 
+    </div> 
+     
+     </div><!--  .col-xs-1 .col-md-9 -->
+     
+</div> <!-- row -->  
+</div><!-- content -->
+ </div> 
+
+
+
