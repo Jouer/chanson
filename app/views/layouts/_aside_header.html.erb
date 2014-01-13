@@ -12,24 +12,25 @@
    
     <%= link_to "Кафе Маяк", root_path, id: "name", :class => "navbar-brand" %>
     
-     
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     
-    <ul class="nav navbar-nav hidden-lg hidden-md">
+    <ul class="nav navbar-nav ">
       
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages about art <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          
-          <% if @feed_subjects.any? %>
- 
-       <%= render partial: 'shared/feed_subject', collection: @feed_subjects %>
-            <% end %>
-        </ul>
-      </li>
+     <li><a href="#"><!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_preferred_4"></a>
+<a class="addthis_button_compact"></a>
+<a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52c3f015720105a5"></script>
+<!-- AddThis Button END --></a></li>
     </ul>
     
     
@@ -38,6 +39,7 @@
      <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "Afisha", info_path %></li>
             <li><%= link_to "View", view_path %></li>
+            <li><%= link_to "Menu", menu_path %></li>
             <li><%= link_to "About cafe", home_path %></li>
            <% if signed_in? %>
             <li><%= link_to "Users", users_path %></li>

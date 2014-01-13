@@ -86,7 +86,18 @@ left: 215px;
 .afisha{  background: asset-url('disk.png')no-repeat bottom right;
 min-height: 800px;}    
 .view{  background: asset-url('chayka.png')no-repeat bottom;
-min-height: 800px;}    
+min-height: 800px;}
+.menu{  background: asset-url('tiram.png')no-repeat bottom;
+min-height: 800px;
+h3{float: left;
+  margin-right: 10px;
+  font-size: 2.5em;
+  color: $pink;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 100px;
+  line-height: 1;
+}}      
 &:after {
 	content:"";
 	position: absolute;
@@ -116,14 +127,12 @@ min-height: 800px;}
  background: asset-url('lg.png') no-repeat;
 }
 
-.col1{padding:30px;       }
+.col1{padding:30px;}
 .col2{border-left: 1px solid #ccc; margin-top: 50px;      }
 .mode{
 img {
-float: left;
-height: 200px;
 padding: 20px;
-border: 1px solid $marine;
+border: 1.8px solid $marine;
 	}
 }
  .view img{

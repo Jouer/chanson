@@ -12,14 +12,19 @@ class StaticPagesController < ApplicationController
   @page = Page.where(:permalink => 'about').first
   end
 
-	def info
+ def info
 	@image = 'hall1.jpg'
     @page = Page.where(:permalink => 'afisha').first
 	end
 
   def view
-	@image = 'cafe.png'
+	@image = 'lg.png'
     @page = Page.where(:permalink => 'view').first
+	end
+	
+ def menu
+	@image = 'bocal.png'
+    @page = Page.where(:permalink => 'menu').first
 	end
 
   def show
