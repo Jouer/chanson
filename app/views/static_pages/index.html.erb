@@ -3,18 +3,43 @@
 <div id="content_page">
 <div class="container clearfix">
 <div class="row">
-    <div class="col-md-3 hidden-xs hidden-sm">
+    <div class="col-md-3" >
 
-  <%= image_tag(@image,width:'200', :alt => "", class: "")%>
+  <%= image_tag(@image,width:'200', :alt => "", class: "visible-lg")%>
    <li><a href="#"><!-- AddThis Button BEGIN -->
-<a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300&amp;pubid=ra-52c3f015720105a5"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a>
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_preferred_4"></a>
+<a class="addthis_button_compact"></a>
+<a class="addthis_counter addthis_bubble_style"></a>
+</div>
 <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52c3f015720105a5"></script>
 <!-- AddThis Button END --></a></li>
+<div class="sheet hidden-lg">
+<div class="table">
+<%= image_tag(@image,width:'200', :alt => "", class: "")%>
+  
+<% if @page %>
+<% @page.sections.each do |section| %>
+<% case section.content_type
+       when 'HTML' %>
+       <div class="description">
+          <%= simple_format(section.content) %>
+          </div>
+    <% when 'text' %>
+ <%= section.content %>
+  <% end %>
+ <% end %>
+ <% end %>
+ </div>
+ </div>
      </div><!--  col-md-3 -->
  
  
-<div class="col-xs-12 col-sm-12 col-md-9">
+<div class="col-xs-12 col-sm-12 col-md-9 visible-lg">
     
     <embed src="<%= asset_path('cafe.swf') %>", quality="high"  wmode=transparent  width="800" height="462" name="images/cafe" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
 

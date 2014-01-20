@@ -20,15 +20,13 @@
     <ul class="nav navbar-nav ">
      
     </ul>
-    
-    
-    
+   
     <ul class="nav navbar-nav navbar-right">
      <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "Afisha", info_path %></li>
             <li><%= link_to "View", view_path %></li>
-            <li><%= link_to "Menu", menu_path %></li>
-            <li><%= link_to "About cafe", home_path %></li>
+            <li class="hidden-xs hidden-sm hidden-md"><%= link_to "Menu", menu_path %></li>
+            <li class="hidden-xs hidden-sm hidden-md"><%= link_to "About cafe", home_path %></li>
            <% if signed_in? %>
             <li><%= link_to "Users", users_path %></li>
       <li class="dropdown">
