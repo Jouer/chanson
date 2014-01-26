@@ -21,8 +21,8 @@ test:
 production:
   adapter: postgresql
   encoding: utf8
-  database: joueur_cafe79
-  username: joueur_cafe79
-  password: xV4xa6t5N
-  host: postgresql2.locum.ru
+  database: joueur_chanson25
+  username: joueur_chanson25
+  password: VWhHIB2Ha4
+  host: postgresql5.locum.ru
   timeout: 5000

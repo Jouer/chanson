@@ -34,8 +34,7 @@ h4{color: $gr;}
    }
          
 body {
-  padding-top: 70px;
- background: asset-url('wall.png') 0px 30px;
+ /* padding-top: 70px;*/
   height: 100%; margin: 0 auto 0; 
   color: $marine;
 }
@@ -238,8 +237,7 @@ float: left;
 /* main output */
 #main { min-height: 500px; margin-top: 10px; }
 #content_page { width: 100%; padding: 20px;}
-#content { float: left;}
-        
+.center{ text-align:  center;}        
 /* picture output */
 p, td, ul, ol, li, dl, dt, dd { list-style-type: none;
    }

@@ -8,22 +8,15 @@
    <%= render 'layouts/shim' %>
 </head>
 <body>
- <%= render 'layouts/aside_header' %>
 <div class="container" >
- 
-    <div id="main">
-    <div class="row">
    
       <% flash.each do |key, value| %>
          <%= content_tag(:div, value, class: "alert alert-#{key}") %>
       <% end %>
-      <div id="content">
+      <div class="center">
         <%= yield %>
       </div>
-     
-     </div> <!-- row -->  
-    </div><!-- main --> 
-   
+     <div class="clear"></div>
   <%= render 'layouts/footer_st_pages' %> 
   <%= debug(params) if Rails.env.development? %> 
   </div><!-- container -->

@@ -29,7 +29,7 @@ ssh_options[:forward_agent] = false
 
 # Имя вашего проекта в панели управления.
 # Не меняйте это значение без необходимости, оно используется дальше.
-set :application,     "cafe"
+set :application,     "chanson"
 
 # Сервер размещения проекта.
 set :deploy_server,   "boron.locum.ru"
@@ -62,10 +62,10 @@ set :scm,             :git
 # домашнем каталоге в подкаталоге git/<имя проекта>.git.
 # Подробнее о создании репозитория читайте в нашем блоге
 # http://locum.ru/blog/hosting/git-on-locum
-set :repository,    "git@github.com:Jouer/cafe.git"
+#set :repository,      #"ssh://#{user}@#{deploy_server}/home/#{user}/git/#{application}.git"
 
 ## Если ваш репозиторий в GitHub, используйте такую конфигурацию
-# set :repository,    "git@github.com:username/project.git"
+ set :repository,    "git@github.com:Jouer/chanson.git"
 
 ## --- Ниже этого места ничего менять скорее всего не нужно ---
 
