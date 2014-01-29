@@ -1,27 +1,59 @@
-<% provide(:title, 'About Project') %>
+<% provide(:title, 'example') %>
 <div class="container clear">
+<div class="row">
+  <div class="col-md-6">
 
-
-<div align="center" class="book center" >
-	
-	<embed src="<%= asset_path('ex.swf') %>", quality="high"  wmode=transparent  width="1024" height="768" align="middle"  allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
-	
-	
-
- <% if @page %>
-<% @page.sections.each do |section| %>
-<% case section.content_type
-       when 'HTML' %>
-       <div class="description">
-          <%= simple_format(section.content) %>
-          </div>
-    <% when 'text' %>
- <%= section.content %>
-  <% end %>
- <% end %>
- <% end %>
-<div class="line clear"><%= image_tag("tel.png", alt: "Imaginasion") %><p>570-48-98</p></div> 
+<div align="left" >
+  <h3>Последовательность</h3>
+<% inc = 10 %>
+number first:<h3> 1 <% a =[1] %></h3>
+ 
+<% loop do %>	
+ <% i=[] %>
+  <%c = a.pop %>
+    <% while( c ) %>
+    
+          <% 1.upto(9) do |num| %>
+                <% count = 0 %>
+                    <% while( c == num ) %>
+                         <% count += 1  %>
+                         <% c = a.pop %>
+                     <% end %>
+                     <% if ( count > 0 ) %>
+                          <% i << num %>
+                          <% i << count %>
+                     <% end %>
+                  
+          <% end %>
+     <% end %>
+      <% a= i.reverse %>
+      number next: <h3> <%= a.join(' ') %></h3>
+       <% inc -= 1 %>
+       <% break if inc < 0 %>
+<% end %>    </div>
 </div>
+<div align="left" class="col-md-6">
+  <h3>не совсем та последовательность</h3>
+  <% inc = 10 %>
+number first:<h3><%= a = "1" %></h3>
+ 
+      <% loop do %>	
+         <% i=[] %>
+         <% 1.upto(9) do |num| %>
+         <% n=a.count( num.to_s ) %>
+             <% if !(n==0) %>
+             <% i << num %>
+             <% i << n %>
+             <% end %>
+        <% end %>
+ number next:<h3><%= a = i.reverse.join %></h3>
+       <% inc -= 1 %>
+       <% break if inc < 0 %>
+        <% end %>    
+        </div>
+
+
+    
 </div><!-- container -->
 
 
